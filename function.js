@@ -52,5 +52,91 @@ function printMessage() {
     let message = 'hello';
     console.log(message); //local variable
     console.log(globalMessage);
+    function printAnother() {
+        console.log(message);
+        let childMessage = 'hello';
+    }
+    // console.log(childMessage); 내부 함수를 외부에서 출력하면 오류 발생
 }
 printMessage();
+
+// 6. Return a value
+function sum(a,b){
+    return a + b; 
+}
+const result = sum(1,2); //3
+console.log(`sum: ${sum(1,2)}`);
+
+// 7. Early return, early exit -> bad
+function upgradeUser(user){
+    if(user.point > 10){
+        //long upgrade logic...
+    }
+}
+
+//good -> 조건에 맞지 않은 함수는 return 해서 빨리 종료시켜주는게 좋음
+function upgrade(user) {
+    if(user.point <= 10) {
+        return;
+    }
+    //long upgrade logic...
+}
+
+// 1.Function expression
+const print = function () { //anonymous function
+    console.log('print');
+};
+print();
+const printAgain = print;
+printAgain();
+const sumAgain = sum;
+console.log(sumAgain(1,3));
+
+// 2.Callback function using function expression
+function randomQuiz(answer, printYes, printNo) { //함수 전달
+    if (answer === 'love you'){
+        printYes()
+    } else {
+        printNo();
+    }
+}
+//anonymous function
+const printYes = function() {
+    console.log('yes!');
+};
+//named function function print()
+const printNo = function print() {
+    console.log('no!');
+    // print(); 함수내부에서 호출할때 named function 사용
+};
+randomQuiz('wrong', printYes, printNo);
+randomQuiz('love you', printYes, printNo);
+
+//Arrow function
+//always anonymous
+// const simplePrint = function() {
+//     console.log('simplePrint!');
+// };
+
+const simplePrint = () => console.log('simplePrint!');
+
+// const add = function (a+b) {
+//     return a + b;
+// };
+
+const add = (a, b) => a + b;
+const simpleMultiply = (a,b) => {
+    //do something more 블록 사용가능, 마지막엔 return 사용
+    return a * b;
+};
+
+// IIFE: immediately Invoked Fuction Expression
+function hello() {
+    console.log('IIFE');
+}
+hello();
+
+//IIFE ex -> function부터 처음에 소괄호로 묶어줌
+(function hello(){
+    console.log('IIFE');
+})();
