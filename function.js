@@ -140,3 +140,25 @@ hello();
 (function hello(){
     console.log('IIFE');
 })();
+
+//Quiz 1
+//function calculate(command, a, b)
+//command: add, substract, divide, multiply, remainder
+
+function calculate(command, a, b) {
+    switch(command){ //정해진 데이터 처리에는 switch문 사용용이
+        case 'add':
+            return a+b;
+        case 'substract':
+            return a-b;
+        case 'divide':
+            return a/b;
+        case 'multiply':
+            return a*b;
+        case 'remainder':
+            return a%b;
+        default:
+            throw Error('unknown command');
+    }
+}
+console.log(calculate('add',2,3));
