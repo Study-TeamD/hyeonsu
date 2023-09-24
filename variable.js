@@ -32,7 +32,15 @@
 // const daysInWeek = 7;
 // const maxNumber = 5;
 
+//Immutable data types: premitive types, frozen objects
+//Mutable data types: all objects by default are mutable in JS
+//favor immutable data type always for a few reasons:
+
+
 //4. Variable types
+//primitive, single item: number, string, boolean, null, undefined, symbol -> value가 메모리에 저장된다.
+//object, box container -> reference가 메모리에 저장된다.
+//function, first-class function
 // 숫자
 
 const count = 17;
