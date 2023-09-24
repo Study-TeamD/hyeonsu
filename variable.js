@@ -41,7 +41,6 @@
 //primitive, single item: number, string, boolean, null, undefined, symbol -> value가 메모리에 저장된다.
 //object, box container -> reference가 메모리에 저장된다.
 //function, first-class function
-// 숫자
 
 const count = 17;
 const size = 17.1;
