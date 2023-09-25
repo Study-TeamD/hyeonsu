@@ -119,4 +119,4 @@ console.log(triangle instanceof Rectangle);  //F
 console.log(triangle instanceof Triangle);  //T
 console.log(triangle instanceof Shape);  //T
 console.log(triangle instanceof Object);  //T
-console.log(triangle.toString);
+console.log(triangle.toString); // 고급스럽게 표현
