@@ -30,7 +30,7 @@ fruits.forEach((fruit) => console.log(fruit));
 
 //4. Addition, deletion, copy
 //push : add an item to the end
-fruits.push('strawberry, peach');
+fruits.push('strawberry', 'peach');
 console.log(fruits);
 //pop: remove an item from the end
 fruits.pop();
@@ -64,7 +64,7 @@ console.log(newFruits);
 
 //5.Searchin
 //find the index
-console.clear();
+// console.clear();
 console.log(fruits);
 console.log(fruits.indexOf('apple'));
 console.log(fruits.indexOf('watermelon'));  // indexOf -> index number
@@ -74,7 +74,7 @@ console.log(fruits.includes('watermelon')); //   incluses -> true/false
 console.log(fruits.includes('코코넛'));
 
 // lastIndexOf
-console.clear();
+// console.clear();
 fruits.push('apple');
 console.log(fruits.indexOf('apple')); // 중복된 값이 있으면 가장 첫번째 인덱스 값 출력
 console.log(fruits.lastIndexOf('apple')); // 이건 제일 마지막 인덱스 값 출력
