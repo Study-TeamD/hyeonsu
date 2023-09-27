@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 //Objects
 // object = { key : value }; 집합체
