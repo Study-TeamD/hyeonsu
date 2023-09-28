@@ -74,10 +74,26 @@ const students= [
 console.clear();
 // Q9. compute students' average score
 {
-const result = students.reduce((prev, curr) => {
-    console.log('--------');
-    console.log(prev);
-    console.log(curr);
-});
+    const result = students.reduce((prev, curr) => prev + curr.score, 0);
+    console.log(result / students.length);  //return 값이 prev로 감
 }
-// Q10. make a string out of an array
+// Q10. make a string containing all the scores
+// result should be: '45, 80, 90, 66, 88'
+{ // map 은 배열자체 출력
+    const result = students
+        .map((student) => student.score)
+        .filter((score) => score >= 50)
+        .join();
+    console.log(result);
+}
+
+//Bonus! do Q10 sorted in ascending order
+//result should be: '45, 66, 80, 88, 90'
+{
+    const result = students
+        .map((student) => student.score)
+        .sort((a,b )=> a - b)
+        // .sort()
+        .join(); //string으로 변환
+    console.log(result);
+}
